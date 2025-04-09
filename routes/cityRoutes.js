@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.get('/search', (req, res) => {
   try {
     const { q } = req.query;
-    if (!q || typeof q !== 'string') {
+    if (!q || typeof q !== 'String') {
       return res.status(400).json({ error: 'Query parameter "q" is required' });
     }
 
